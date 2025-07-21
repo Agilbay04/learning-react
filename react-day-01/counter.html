@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+            padding: 16px;
+            margin: 16px auto;
+            text-align: center  ;
+        }
+
+        .card-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .card-footer {
+            margin-top: auto;
+            padding: 8px;
+        }
+    </style>
+    <title>Simple Counter 🔄️</title>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        const container = document.getElementById('root');
+        const root = ReactDOM.createRoot(container);
+
+        function CParagraph({desc})
+        {
+            return <p>{desc}</p>
+        }
+
+        function CButton({desc, event, disabled})
+        {
+            return <button onClick={event} disabled={disabled}>{desc}</button>
+        }
+
+        function AppCounter() {
+            const [counter, setCounter] = React.useState(0);
+            
+            function increaseCounter() {
+                setCounter(counter + 1);
+            }
+            
+            function decreaseCounter() {
+                setCounter(counter - 1);
+            }
+
+            function resetCounter() {
+                setCounter(0);
+            }
+
+            function SetMessage(counter) {
+                if (counter === 10) {
+                    return "Done, you reached the limit!";
+                }
+            }
+
+            function SetDisabledDefault(counter) {
+                if (counter === 0) {
+                    return true;
+                }
+            }
+
+            function SetDisabled(counter) {
+                if (counter === 10) {
+                    return true;
+                }
+            }
+
+            return (
+                <>
+                    <div className="card">
+                        <div className="card-content">
+                            <CButton desc="-" event={decreaseCounter} disabled={SetDisabledDefault(counter)} />
+                            <CParagraph desc={SetMessage(counter) || counter} />
+                            <CButton desc="+" event={increaseCounter} disabled={SetDisabled(counter)} />
+                        </div>
+                        <div className="card-footer">
+                            <CButton desc="Reset" event={resetCounter} disabled={SetDisabledDefault(counter)} />
+                        </div>
+                    </div>
+                </>
+            );
+        }
+        root.render(<AppCounter />);
+    </script>
+</body>
+</html>
