@@ -20,6 +20,10 @@
 
 [Day 03-Pt2](03-tic-tac-toe-advance)
 
-## Day 04 - Shopping Notes Application
+## Day 04 - Shopping Notes Basic Application
 
-[Day 04](04-shoping-notes)
+[Day 04](04-shopping-notes-basic)
+
+## Day 04 - Shopping Notes Advance Application
+
+[Day 04](04-shoping-notes-advance)
