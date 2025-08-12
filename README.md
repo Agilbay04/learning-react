@@ -16,9 +16,9 @@
 
 [Day 03](03-tic-tac-toe-basic)
 
-## Day 03-Pt2 - Tic Tac Toe Advance Application
+## Day 03 - Tic Tac Toe Advance Application
 
-[Day 03-Pt2](03-tic-tac-toe-advance)
+[Day 03-adv](03-tic-tac-toe-advance)
 
 ## Day 04 - Shopping Notes Basic Application
 
@@ -26,4 +26,4 @@
 
 ## Day 04 - Shopping Notes Advance Application
 
-[Day 04](04-shoping-notes-advance)
+[Day 04-adv](04-shoping-notes-advance)
