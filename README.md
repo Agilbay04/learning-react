@@ -19,3 +19,7 @@
 ## Day 03-Pt2 - Tic Tac Toe Advance Application
 
 [Day 03-Pt2](03-tic-tac-toe-advance)
+
+## Day 04 - Shoping Notes Application
+
+[Day 04](04-shoping-notes)
